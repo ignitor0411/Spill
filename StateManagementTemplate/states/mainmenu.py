@@ -2,6 +2,8 @@ import pygame
 import pygame.freetype
 from states.state import State
 from states.etkultspill import EtKultSpill
+from states.flappybird import FlappyBird
+from states.stackinggame import StackingGame
 # Importer flere states her etter hvert som du lager dem
 # from states.annenstate import AnnenState
 
@@ -38,6 +40,8 @@ class MainMenu(State):
         # Legg til alle states du vil ha knapper for her
         self.states = [
             ("EtKultSpill", EtKultSpill), 
+            ("Flappy Bird", FlappyBird),
+            ("Stacking Game", StackingGame),
             # ("Annen State", AnnenState),
         ]
 

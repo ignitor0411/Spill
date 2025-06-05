@@ -1,5 +1,7 @@
 import pygame, time
 from states.mainmenu import MainMenu
+from states.flappybird import FlappyBird
+from states.stackinggame import StackingGame
 
 class Game:
     def __init__(self):
@@ -10,6 +12,8 @@ class Game:
         self.screen = pygame.display.set_mode((500, 500))
         self.dt, self.prev_time = 0, 0
         self.main_menu = MainMenu(self)
+        self.stacking = StackingGame(self)
+        self.flappy_bird = FlappyBird(self)
         self.state = self.main_menu
         self.mouse_pos = pygame.mouse.get_pos()
         self.mouse_asleep = True
