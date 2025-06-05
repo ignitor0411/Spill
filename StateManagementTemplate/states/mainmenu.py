@@ -37,7 +37,7 @@ class MainMenu(State):
         self.bg = pygame.transform.scale(self.bg, (self.game.screen.get_width(), self.game.screen.get_height()))
         # Legg til alle states du vil ha knapper for her
         self.states = [
-            ("EtKultSpill", EtKultSpill),
+            ("EtKultSpill", EtKultSpill), 
             # ("Annen State", AnnenState),
         ]
 
