@@ -17,6 +17,7 @@ class Game:
         self.state = self.main_menu
         self.mouse_pos = pygame.mouse.get_pos()
         self.mouse_asleep = True
+        self.clock = pygame.time.Clock()
         
         self.set_up_actions()
 
@@ -54,6 +55,7 @@ class Game:
 
     def update(self):
         self.state.update(self.actions, self.dt)
+        self.clock.tick(60)
 
     def update_time(self):
         self.dt = time.time() - self.prev_time

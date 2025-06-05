@@ -34,14 +34,14 @@ class FlappyBird(State):
         self.is_game_over = False
 
     def load_highscore(self):
-        path = "save_file/flappybird_highscore.json"
+        path = "StateManagementTemplate/save_file/flappybird_highscore.json"
         if os.path.exists(path):
             with open(path, "r") as f:
                 return json.load(f).get("highscore", 0)
         return 0
 
     def save_highscore(self):
-        path = "flappybird_highscore.json"
+        path = "StateManagementTemplate/save_file/flappybird_highscore.json"
         with open(path, "w") as f:
             json.dump({"highscore": self.highscore}, f)
 
