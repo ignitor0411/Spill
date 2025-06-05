@@ -3,6 +3,9 @@ from states.mainmenu import MainMenu
 
 class Game:
     def __init__(self):
+        pygame.init()
+        pygame.font.init()
+        self.font = pygame.font.SysFont(None, 22)
         self.running = True
         self.screen = pygame.display.set_mode((500, 500))
         self.dt, self.prev_time = 0, 0
@@ -10,8 +13,7 @@ class Game:
         self.state = self.main_menu
         self.mouse_pos = pygame.mouse.get_pos()
         self.mouse_asleep = True
-        pygame.font.init()
-        self.font = pygame.font.SysFont(None, 22)
+        
         self.set_up_actions()
 
     def set_up_actions(self):
