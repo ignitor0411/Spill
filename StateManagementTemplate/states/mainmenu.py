@@ -33,7 +33,7 @@ class MainMenu(State):
     def __init__(self, game):
         super().__init__(game)
         self.game = game
-        self.bg = pygame.image.load("StateManagementTemplate/assets/bg1.png")  # Last inn bakgrunnsbilde
+        self.bg = pygame.image.load("StateManagementTemplate/assets/MainMenu_bg.png")  # Last inn bakgrunnsbilde
         self.bg = pygame.transform.scale(self.bg, (self.game.screen.get_width(), self.game.screen.get_height()))
         # Legg til alle states du vil ha knapper for her
         self.states = [
