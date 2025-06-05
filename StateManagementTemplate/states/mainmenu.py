@@ -2,6 +2,7 @@ import pygame
 import pygame.freetype
 from states.state import State
 from states.etkultspill import EtKultSpill
+from states.mrpresident import MrPresident
 # Importer flere states her etter hvert som du lager dem
 # from states.annenstate import AnnenState
 
@@ -36,7 +37,7 @@ class MainMenu(State):
         self.bg = pygame.image.load("StateManagementTemplate/assets/MainMenu_bg.png")
         self.bg = pygame.transform.scale(self.bg, (self.game.screen.get_width(), self.game.screen.get_height()))
         self.states = [
-            ("EtKultSpill", EtKultSpill),
+            ("EtKultSpill", EtKultSpill), 
             # ("Annen State", AnnenState),
         ]
         self.buttons = []
