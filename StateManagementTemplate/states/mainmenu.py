@@ -2,6 +2,7 @@ import pygame
 import pygame.freetype
 from states.state import State
 from states.etkultspill import EtKultSpill
+from states.mrpresident import MrPresident
 # Importer flere states her etter hvert som du lager dem
 # from states.annenstate import AnnenState
 
@@ -38,6 +39,7 @@ class MainMenu(State):
         # Legg til alle states du vil ha knapper for her
         self.states = [
             ("EtKultSpill", EtKultSpill), 
+            ("MrPresident", MrPresident)
             # ("Annen State", AnnenState),
         ]
 
